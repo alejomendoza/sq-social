@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Our Cool PDF Report</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: inherit;
+        }
+
+        html {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            line-height: 1.6;
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: white;
+        }
+
+        .gradientBorder {
+            background-color: red;
+            width: 100vw;
+            height: 100vh;
+            padding: 8px;
+            background-image: linear-gradient(225deg,
+                    #f7b500 0%,
+                    #b620e0 49%,
+                    #32c5ff 100%)
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 100%;
+            height: 100%;
+            background-color: #111420;
+        }
+
+        .title {
+            font-size: 2rem;
+            font-weight: 900;
+            letter-spacing: -0.025em;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .gradientText {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(225deg,
+                    #f7b500 0%,
+                    #b620e0 49%,
+                    #32c5ff 100%)
+        }
+
+        .reward {
+            display: flex;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            justify-content: space-around;
+            align-items: center;
+            width: 75%;
+            font-size: 2rem;
+            font-weight: 700;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .reward>img {
+            width: 2em;
+            height: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gradientBorder">
+        <div class="content">
+            <h1 class="title">
+                I just finished <span class='gradientText'>Quest {{quest}}</span>
+                <br>of <span class='gradientText'>Stellar Quest {{set}}</span>
+            </h1>
+            <div class='reward'>
+                <span>IMG</span>
+                <span>+{{reward}} XLM</span>
+            </div>
+        </div>
+    </div>
+</body>
