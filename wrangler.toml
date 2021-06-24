@@ -1,0 +1,10 @@
+name = "sq-social"
+type = "javascript"
+account_id = "8d06a01e958a084add5fcf155430e0fa"
+route = "sq-social.stellar-quest.workers.dev"
+workers_dev = true
+
+[build]
+command = "npm install && npm run build"
+[build.upload]
+format = "service-worker"
